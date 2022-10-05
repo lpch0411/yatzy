@@ -2,8 +2,11 @@
 <hr/>
 *This file will document the layout for the yahtzee gameplay.*
 
+<br>
 <span style="color:red"> I am **red** colour text.
 </span>
+
+<br>
 
 **bold text**
 
