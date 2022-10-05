@@ -2,7 +2,7 @@
 
 *This file will document the layout for the yahtzee gameplay.*
 
-<span style="color:yellow"> I am yellow colour text.
+<span style="color:red"> I am **red** colour text.
 </span>
 
 **bold text**
