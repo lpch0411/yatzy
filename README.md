@@ -1,5 +1,5 @@
 # Yahtzee
-
+<hr/>
 
 *This file will document the layout for the yahtzee gameplay.*
 
@@ -9,19 +9,19 @@
 **bold text**
 
 ## Header
-<hr/>
+
 
 ## Dices
-<hr/>
+
 
 ## Colour palette
-<hr/>
+
 
 ## Scoreboard
-<hr/>
+
 
 ## Footer
-<hr/>
+
 
 <br>
 
