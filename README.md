@@ -1,22 +1,28 @@
-## Yahtzee
-<hr/>
+# Yahtzee
+
 
 *This file will document the layout for the yahtzee gameplay.*
-
 
 <span style="color:red"> I am **red** colour text.
 </span>
 
 **bold text**
 
-# Header
+## Header
+<hr/>
 
-# Dices
+## Dices
+<hr/>
 
-# Colour palette
+## Colour palette
+<hr/>
 
-# Scoreboard
+## Scoreboard
+<hr/>
 
+## Footer
+<hr/>
 
 <br>
-Mahima Sawhney, Hung Lai and Irina Salikhova
+
+***Done by Mahima Sawhney, Hung Lai and Irina Salikhova***
