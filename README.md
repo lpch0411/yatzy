@@ -1,6 +1,20 @@
-CST3106_labs
+## Yahtzee
 
-This document will contain all the necessary details for this lab 
-course as well as the necessary assignments and project deliverables.
+*This file will document the layout for the yahtzee gameplay.*
 
-Mahima Sawhney
+<span style="color:green"> I am green colour text.
+</span>
+
+**bold text**
+
+# Header
+
+# Dices
+
+# Colour palette
+
+# Scoreboard
+
+
+<br>
+Mahima Sawhney, Hung Lai and Irina Salikhova
