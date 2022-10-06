@@ -1,21 +1,21 @@
 # Yahtzee
 <hr/>
 
-*This file will document the layout for the yahtzee gameplay.*
+*This file will document the design for the yahtzee gameplay.*
 
 <span style="color:red"> I am **red** colour text.
 </span>
 
 **bold text**
 
-## Header
-
+## Font
+![This is the font Fira Sans!](assets/fira_sans.png)
 
 ## Dices
 
 
 ## Colour palette
-
+![This is the color palette!](assets/yatzy_colour_palette.png)
 
 ## Scoreboard
 
