@@ -12,13 +12,13 @@
 
 
 ## Dices
-![This is the dice 1!](assets/dice-1.png)
+
 <img src="assets/dice-1.png"  width=130px height=130px> </img>
-![This is the dice 2!](assets/dice-2.png)
-![This is the dice 3!](assets/dice-3.png)
-![This is the dice 4!](assets/dice-4.png)
-![This is the dice 5!](assets/dice-5.png)
-![This is the dice 6!](assets/dice-6.png)
+<img src="assets/dice-2.png"  width=130px height=130px> </img>
+<img src="assets/dice-3.png"  width=130px height=130px> </img>
+<img src="assets/dice-4.png"  width=130px height=130px> </img>
+<img src="assets/dice-5.png"  width=130px height=130px> </img>
+<img src="assets/dice-6.png"  width=130px height=130px> </img>
 
 ## Colour palette
 ![This is the color palette!](assets/yatzy_colour_palette.png)
