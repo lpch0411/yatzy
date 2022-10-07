@@ -21,7 +21,7 @@
 <img src="assets/dice-6.png"  width=130px height=130px> </img>
 
 ## Colour palette
-<img src="assets/yatzy_colour_palette.png" height=500px> </img>
+<img src="assets/yatzy_colour_palette.png" width=500px height=500px> </img>
 
 ## Scoreboard
 
