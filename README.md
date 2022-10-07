@@ -9,7 +9,7 @@
 ![This is the font Fira Sans!](assets/fira_sans.png)
 **{font-family: 'Fira Sans', sans-serif;}**
 
-The font-family <span style="font-family: 'Fira Sans', sans-serif; font-size:15px;"> Fira Sans </span> is used.
+The font-family <span style="font-family: 'Fira Sans', sans-serif; font-size:20px;"> Fira Sans </span> is used.
 
 | Element name   | Font Features |
 | ------------ | ------------ |
@@ -18,7 +18,7 @@ The font-family <span style="font-family: 'Fira Sans', sans-serif; font-size:15p
 |<span style="font-family: 'Fira Sans', sans-serif; font-size:20px; font-weight:700;">  Subtitles </span>  | <span style="font-family: 'Fira Sans', sans-serif; font-size:20px; font-weight:700;">   Bold 700, 18px  </span>  |
 |<span style="font-family: 'Fira Sans', sans-serif; font-size:20px; font-weight:500;">  Paragraphs </span>  | <span style="font-family: 'Fira Sans', sans-serif; font-size:20px; font-weight:500;">  Medium 500, 16px  </span>  |
 |<span style="font-family: 'Fira Sans', sans-serif; font-size:20px; font-weight:500;">  _Places_ </span>  | <span style="font-family: 'Fira Sans', sans-serif; font-size:20px; font-weight:500;">  _Medium 500, 16px, italic_  </span>  |
-|<span style="font-family: 'Fira Sans', sans-serif; font-size:20px; font-weight:500;"> <u>  _Links_ </u></span>  | <span style="font-family: 'Fira Sans', sans-serif; font-size:20px; font-weight:500;"> <u>  _Medium 500, 16px, italic, underlined_ </u></span>  |
+|<span style="font-family: 'Fira Sans', sans-serif; font-size:20px; font-weight:500;"> Links</span>  | <span style="font-family: 'Fira Sans', sans-serif; font-size:20px; font-weight:500;">  Medium 500, Heading style (h4)</span>  |
 
 
 ## Colour palette
