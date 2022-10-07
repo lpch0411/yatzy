@@ -10,9 +10,6 @@
 ![This is the font Fira Sans!](assets/fira_sans.png)
 **{font-family: 'Fira Sans', sans-serif;}**
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans');
-</style>
 
 ## Dices
 ![This is the dice 1!](assets/dice-1.png)
