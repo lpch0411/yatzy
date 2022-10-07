@@ -27,4 +27,4 @@
 
 ## Footer
 
-***Done by Mahima Sawhney, Hung Lai and Irina Salikhova***
+![This is the footer!](assets/footer.png)
