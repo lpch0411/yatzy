@@ -1,5 +1,4 @@
 # Yahtzee
-<hr/>
 
 *This file will document the design for the yahtzee gameplay.*
 <link rel="preconnect" href="https://fonts.googleapis.com">
