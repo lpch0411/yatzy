@@ -27,14 +27,14 @@ The font-family <span style="font-family: 'Fira Sans', sans-serif; font-size:20p
 1A090D (black) colour is used as background colour for header, footer, dices and buttons, 
 as text color for gameboard, and as border colour
 
-A74DC6 (light blue) colour is used as 
+A74DC6 (light blue) colour is used as background colour for gameboard 
 
 ED6A5A (terra cotta) colour  is used for decorations and borders
 
-56667A (dark blue) colour is used as 
+56667A (dark blue) colour is used as text colour for scoreboard
 
 F4F1BB (light yellow) colour is used as background colour for graphical elements, 
-and as text color for header, footer, buttons
+and as text color for header, footer, buttons and scoreboard
 
 ## Icons
 
