@@ -69,7 +69,7 @@ position: on top of the page
 <img src="assets/dice-2.png"  width=130px height=130px> </img>
 <img src="assets/dice-3.png"  width=130px height=130px> </img>
 <img src="assets/dice-4.png"  width=130px height=130px> </img>
-<img src="assets/dice-5.png"  width=140px height=130px> </img>
+<img src="assets/dice-5.png"  width=130px height=130px> </img>
 <img src="assets/dice-6.png"  width=130px height=130px> </img>
 
 ### Scoreboard
