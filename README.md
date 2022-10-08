@@ -75,7 +75,7 @@ position: on top of the page
 ### Scoreboard
 
 ### Buttons 
-
+![buttons](assets/buttons.png "buttons")
 ### Footer
 
 ![This is the footer!](assets/footer.png)
