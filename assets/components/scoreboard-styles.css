@@ -1,0 +1,49 @@
+.scoreboard{
+    background-color: #F4F1BB;
+    border-collapse: collapse;
+    color: #56667A;
+
+    border-color: #ED6A5A;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
+    position:fixed;
+}
+th,td{
+    border: solid 2px #ED6A5A;
+    padding-left: 3px;
+    padding-top: 2px;
+padding-bottom: 2px;
+}
+.tabletotaling {
+font-weight: 600;
+text-align: center;
+
+}
+
+.yourscore {
+width: 100px;
+}
+
+td .hint {
+visibility: hidden;
+
+background-color: #A7ADC6;
+font-family: 'Fira Sans', sans-serif;
+    font-weight: 200;
+font-style: italic;
+font-size: 14px;
+color: 1A090D;
+text-align: center;
+padding: 5px 0;
+border-radius: 6px;
+position: absolute;
+z-index:1;
+}
+
+td:hover .hint {
+pointer: pointer;
+visibility: visible;
+
+}
