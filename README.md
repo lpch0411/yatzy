@@ -62,6 +62,8 @@ position: on top of the page
 
 ### Game board
 
+![This is the gameboard](assets/gameboard.png "Gameboard")
+
 ### Dices
 
 <img src="assets/dice-1.png"  width=130px height=130px> </img>
