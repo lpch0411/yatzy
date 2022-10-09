@@ -46,7 +46,6 @@ For contact fields: <br>
 ![gmail](assets/gmail.png "gmail") &nbsp; &nbsp; &nbsp;
 ![github](assets/github.png "github") &nbsp; &nbsp; &nbsp; 
 
-----
 
 ## UI Components
 
