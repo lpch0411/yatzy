@@ -33,8 +33,8 @@ ED6A5A (Terra Cotta) colour  is used for decorations and borders
 
 56667A (Dark Electric Blue) colour is used as text colour for scoreboard and the hover colour of the button
 
-F4F1BB (Pale Spring Bud) colour is used as background colour for graphical elements, 
-and as text color for header, footer and scoreboard
+F4F1BB (Pale Spring Bud) colour is used as background colour for graphical elements, scoreboard 
+and as text color for header and footer
 
 ## Icons
 
