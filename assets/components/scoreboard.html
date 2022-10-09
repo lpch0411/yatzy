@@ -1,121 +1,136 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans";
-        <title></title>
-        <style>
-            .scoreboard{
-                background-color: #F4F1BB;
-                color: #56667A;
-                border-style: double;
-                border-color: #ED6A5A;
-                font-family: 'Fira Sans', sans-serif;
-                border-width: 5px;
-                margin-right: 600px;
-                position:fixed;
-            }
-            tr,th,td{
-                border-left: solid 2px #ED6A5A;
-                border-bottom: solid 2px #ED6A5A;
-            }
-            td:first-child, th:first-child {
-            border-left: none;
-            }
-            tr:last-child{
-            border-bottom: none;
-            }
+<!DOCTYPE html>
+<html >
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 
-        </style>
-    </head>
-    <body>
-        <div class = "scoreboard">
+		<meta charset="utf-8">
+		<title>Scoreboard</title>
+		<link type="text/css" rel="stylesheet" href="scoreboard-styles.css">
+</head>
+	<body>
+	
+	     <div class = "scoreboard">
             <table>
-                    <tr>
+                    <tr class = "tableheading">
                         <th>UPPER SECTION</th>
-                        <th>HOW TO SCORE</th>
-                        <th>GAME#1</th>
-                        <th>GAME#2</th>
-                        <th>GAME#3</th>
-                        <th>GAME#4</th>
-                        <th>GAME#5</th>
+                        <th>Score</th>
                     </tr>
-                <tr> 
-                    <td>Aces</td>
-                    <td> Count and add only Aces</td>
+                <tr class = "tablescoring"> 
+                    <td>Aces
+					<p class = "hint"> Count and add only Aces </p> 
+					</td>
+                    <td class = "yourscore"></td>
                 </tr>
-                <tr> 
-                    <td>Twos</td>
-                    <td> Count and add only Twos</td>
+                <tr class = "tablescoring"> 
+                    <td>Twos
+							<p class = "hint"> Count and add only Twos </p> 
+					</td>
+                    <td class = "yourscore"> </td>
                 </tr>
-                <tr> 
-                    <td>Threes</td>
-                    <td> Count and add only Threes</td>
+                <tr class = "tablescoring"> 
+                    <td>Threes
+							<p class = "hint"> Count and add only Threes </p> 
+							</td>
+                    <td class = "yourscore"> </td>
                 </tr>
-                <tr> 
-                    <td>Fours</td>
-                    <td> Count and add only Fours</td>
+                <tr class = "tablescoring"> 
+                    <td>Fours
+							<p class = "hint"> Count and add only Fours </p> 
+							</td>
+                    <td class = "yourscore"> </td>
                 </tr>
-                <tr> 
-                    <td>Fives</td>
-                    <td> Count and add only Fives</td>
+                <tr class = "tablescoring"> 
+                    <td>Fives
+							<p class = "hint"> Count and add only Fives </p> 
+							</td>
+                    <td class = "yourscore"> </td>
                 </tr>
-                <tr> 
-                    <td>Sixes</td>
-                    <td> Count and add only Sixes</td>
+                <tr class = "tablescoring"> 
+                    <td>Sixes
+							<p class = "hint"> Count and add only Sixes </p> 
+							</td>
+                    <td class = "yourscore"> </td>
                 </tr>
-                <tr>
-                    <td>TOTAL SCORE</td>
+                <tr class = "tablescoring">
+                    <td>Bonus
+					<p class = "hint"> Add 35 if total score of upper section > 63 </p> 
+							</td>
+                    <td class = "yourscore"> </td>
                 </tr>
-                <tr>
-                    <td>BONUS(If total score > 63)</td>
+                <tr class = "tabletotaling">
+                    <td>TOTAL (of upper section)</td>
+					  <td class = "yourscore"> </td>
                 </tr>
-                <tr>
-                    <td>TOTAL(of upper section)</td>
-                </tr>
-                <tr>
+				
+                <tr class = "tableheading">
                     <th>LOWER SECTION</th>
+					<th>Score</th>
                 </tr>
-                <tr>
-                    <td>3 of a kind </td>
-                    <td> Add total of all dice</td>
+                <tr class = "tablescoring">
+                    <td>3 of a kind 
+					<p class = "hint"> Add total of all dice </p> 
+							</td>
+                    <td class = "yourscore"> </td>
                 </tr>
-                <tr>
-                    <td>4 of a kind </td>
-                    <td> Add total of all dice</td>
+                <tr class = "tablescoring">
+                    <td>4 of a kind 
+					<p class = "hint"> Add total of all dice </p> 
+							</td>
+                    <td class = "yourscore"> </td>
                 </tr>
-                <tr>
-                    <td>Full House </td>
-                    <td> SCORE 25</td>
+                <tr class = "tablescoring">
+                    <td>Full House 
+					<p class = "hint"> Score 25 if there is 3 of a kind and 2 of a kind</p> 
+							</td>
+                    <td class = "yourscore"> </td>
                 </tr>
-                <tr>
-                    <td>Sm. Straight(seq of 4) </td>
-                    <td> SCORE 30</td>
+                <tr class = "tablescoring">
+                    <td>Small Straight
+					<p class = "hint"> Score 30 if there is sequence of 4</p> 
+							</td>
+                    <td class = "yourscore"> </td>
                 </tr>
-                <tr>
-                    <td>Lg. Straight (seq of 5) </td>
-                    <td> SCORE 40</td>
+                <tr class = "tablescoring">
+                    <td>Large Straight
+					<p class = "hint"> Score 40 if there is sequence of 5</p> 
+							</td>
+                    <td class = "yourscore"> </td>
                 </tr>
-                <tr>
-                    <td>YAHTZEE(5 of a kind) </td>
-                    <td> SCORE 50</td>
+                <tr class = "tablescoring">
+                    <td>Yahtzee 
+					<p class = "hint"> Score 50 if there is 5 of a kind</p> 
+							</td>
+                    <td class = "yourscore"> </td>
                 </tr>
-                <tr>
-                    <td>Chance </td>
-                    <td>Add total of all dice</td>
+                <tr class = "tablescoring">
+                    <td>Chance 
+					<p class = "hint">  Add total of all dice </p> 
+							</td>
+                    <td class = "yourscore"> </td>
                 </tr>
-                <tr>
-                    <td>YAHTZEE BONUS </td>
-                    <td>FOR EACH BONUS/SCORE 100 PER</td>
+                <tr class = "tablescoring">
+                    <td>Yahtzee bonus
+					<p class = "hint"> Score 100 for each additional Yahtzee</p> 
+							</td>
+                    <td class = "yourscore"> </td>
                 </tr>
-                <tr>
-                    <td>TOTAL(lower section) </td>
+                <tr class = "tabletotaling">
+                    <td>TOTAL (of lower section) 
+						</td>
+                    <td class = "yourscore"> </td>
                 </tr>
-                <tr>
-                    <td>TOTAL(upper section) </td>
-                </tr>
-                <tr>
-                    <td>GRAND TOTAL </td>
+                <tr class = "tabletotaling">
+                    <td>GRAND TOTAL 
+						</td>
+                    <td class = "yourscore"> </td>
                 </tr>
             </table>
         </div>
-    </body>
+	
+
+</div>
+ 
+</body>
 </html>

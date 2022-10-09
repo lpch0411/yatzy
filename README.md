@@ -73,6 +73,8 @@ position: on top of the page
 
 ### Scoreboard
 
+![This is the scoreboard](assets/scoreboard.png "Scoreboard")
+
 ### Buttons 
 
 ![buttons](assets/buttons.png "buttons")
