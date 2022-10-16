@@ -27,13 +27,13 @@ The font-family <span style="font-family: 'Fira Sans', sans-serif; font-size:20p
 
 1A090D (Xiketic) colour is used as background colour for header, footer, dices and buttons, as text color for hints
 
-A7ADC6 (Wild Blue Yonder) colour is used as background colour for gameboard,  as background colour for hints
+A7ADC6 (Wild Blue Yonder) colour is used as background colour for gameboard and hints as well as text color for buttons
 
 ED6A5A (Terra Cotta) colour is used for decorations and borders
 
 56667A (Dark Electric Blue) colour is used as text colour for scoreboard and the hover colour of the button
 
-F4F1BB (Pale Spring Bud) colour is used as background colour for scoreboard and as text color for header, footer, buttons
+F4F1BB (Pale Spring Bud) colour is used as background colour for scoreboard and as text color for header and footer
 
 
 ## Icons
