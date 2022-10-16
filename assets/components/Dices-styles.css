@@ -96,9 +96,6 @@ border-color:#461F00;
   
 }
 
-.cube.held div {
-  background-color: hsla(240, 85%, 50%, 0.75);
-  border: 50% solid #1a1aab;
-display: outside;
-
+.cube.held {
+  box-shadow: 5px 5px 15px 23px #ED6a5a;
 }
