@@ -98,4 +98,5 @@ border-color:#461F00;
 
 .cube.held {
   box-shadow: 5px 5px 15px 23px #ED6a5a;
+  position: relative;
 }

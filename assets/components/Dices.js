@@ -1,6 +1,5 @@
-
 var min = 1;
-var max = 6;
+var max = 7;
 var turns = 3;
 
 var positions = [
@@ -90,8 +89,8 @@ function roll(dice) {
   var rand = getRandom(max, min);
   var spins = getRandom(max, min);
 
-  // console.log("Number: " + rand);
-  // console.log("Spins: " + spins);
+   console.log("Number: " + rand);
+   console.log("Spins: " + spins);
 
   rand--;
   spins--;
