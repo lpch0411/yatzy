@@ -10,6 +10,8 @@
 		<link type="text/css" rel="stylesheet" href="scoreboard-styles.css">
 </head>
 	<body>
+	<div class="yahtzee-board">
+    <button id="roll">Roll the dice</button>
 	    <div class = "scoreboard">
             <table>
                     <tr class = "tableheading">
@@ -20,47 +22,47 @@
                     <td>Aces
 					<p class = "hint"> Count and add only Aces </p> 
 					</td>
-                    <td class = "yourscore"></td>
+                    <td class = "yourscore upper" >  <p id = "aces"> &nbsp </p> </td>
                 </tr>
                 <tr class = "tablescoring"> 
                     <td>Twos
 							<p class = "hint"> Count and add only Twos </p> 
 					</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "yourscore upper">  <p id = "twos"> &nbsp </p> </td>
                 </tr>
                 <tr class = "tablescoring"> 
                     <td>Threes
 							<p class = "hint"> Count and add only Threes </p> 
 							</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "yourscore upper" >  <p id = "threes"> &nbsp </p> </td>
                 </tr>
                 <tr class = "tablescoring"> 
                     <td>Fours
 							<p class = "hint"> Count and add only Fours </p> 
 							</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "yourscore upper"> <p id = "fours"> &nbsp <p> </td>
                 </tr>
                 <tr class = "tablescoring"> 
                     <td>Fives
 							<p class = "hint"> Count and add only Fives </p> 
 							</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "yourscore upper">  <p id = "fives"> &nbsp </p> </td>
                 </tr>
                 <tr class = "tablescoring"> 
                     <td>Sixes
 							<p class = "hint"> Count and add only Sixes </p> 
 							</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "yourscore upper" > <p id = "sixes"> &nbsp </p> </td>
                 </tr>
                 <tr class = "tablescoring">
                     <td>Bonus
 					<p class = "hint"> Add 35 if total score of upper section > 63 </p> 
 							</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "totalscore" id = "bonus35"> </td>
                 </tr>
                 <tr class = "tabletotaling">
                     <td>TOTAL (of upper section)</td>
-					  <td class = "yourscore"> </td>
+					  <td class = "totalscore" id = "uppertotal"> </td>
                 </tr>
 				
                 <tr class = "tableheading">
@@ -71,62 +73,68 @@
                     <td>3 of a kind 
 					<p class = "hint"> Add total of all dice </p> 
 							</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "yourscore lower" > <p id = "ofakind3"> </p> </td>
                 </tr>
                 <tr class = "tablescoring">
                     <td>4 of a kind 
 					<p class = "hint"> Add total of all dice </p> 
 							</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "yourscore lower"> <p id = "ofakind4"> </p> </td>
                 </tr>
                 <tr class = "tablescoring">
                     <td>Full House 
 					<p class = "hint"> Score 25 if there is 3 of a kind and 2 of a kind</p> 
 							</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "yourscore lower"> <p id = "fullhouse"> </p> </td>
                 </tr>
                 <tr class = "tablescoring">
                     <td>Small Straight
 					<p class = "hint"> Score 30 if there is sequence of 4</p> 
 							</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "yourscore lower">  <p id = "smallstr"> </p> </td>
                 </tr>
                 <tr class = "tablescoring">
                     <td>Large Straight
 					<p class = "hint"> Score 40 if there is sequence of 5</p> 
 							</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "yourscore lower"> <p id = "largestr"> </p> </td>
                 </tr>
                 <tr class = "tablescoring">
                     <td>Yahtzee 
 					<p class = "hint"> Score 50 if there is 5 of a kind</p> 
 							</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "yourscore lower" id = "checkya"> <p id = "yahtzee"> </p> </td>
                 </tr>
                 <tr class = "tablescoring">
                     <td>Chance 
 					<p class = "hint">  Add total of all dice </p> 
 							</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "yourscore lower"> <p id = "chance"> </p> </td>
                 </tr>
                 <tr class = "tablescoring">
                     <td>Yahtzee bonus
 					<p class = "hint"> Score 100 for each additional Yahtzee</p> 
 							</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "totalscore" id = "bonusyahtzee"> </td>
                 </tr>
                 <tr class = "tabletotaling">
                     <td>TOTAL (of lower section) 
 						</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "totalscore" id = "lowertotal"> </td>
                 </tr>
                 <tr class = "tabletotaling">
                     <td>GRAND TOTAL 
 						</td>
-                    <td class = "yourscore"> </td>
+                    <td class = "totalscore" id = "totaltotal"> </td>
                 </tr>
             </table>
         </div>
+	
+	<div id="confetti-wrapper">
+				        </div>
+		        </div>
+
     </body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="scoreboard.js"></script>
 </html>
