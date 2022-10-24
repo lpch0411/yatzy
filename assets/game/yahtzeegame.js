@@ -113,6 +113,8 @@ function getRandom(max, min) {
 }
 
 
+// buttons
+
 
 
 // scoring
