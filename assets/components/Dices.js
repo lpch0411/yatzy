@@ -1,111 +1,72 @@
-var min = 1;
-var max = 7;
-var turns = 3;
+let images = ["../dice-1.png",
+"../dice-2.png",
+"../dice-3.png",
+"../dice-4.png",
+"../dice-5.png",
+"../dice-6.png"];
+let dice = document.querySelectorAll("img");
 
-var positions = [
-  [ // One
-    { x:  180, y: 1620 },
-    { x:  540, y: 1260 },
-    { x:  900, y:  900 },
-    { x: 1260, y:  540 },
-    { x: 1620, y:  180 },
-    { x: 1980, y: 1980 }
-  ],
-  [ // Two
-    { x:    0, y: 1980 },
-    { x:  360, y: 1620 },
-    { x:  720, y: 1260 },
-    { x: 1080, y:  900 },
-    { x: 1440, y:  540 },
-    { x: 1800, y:  180 }
-  ],
-  [ // Three
-    { x:  180, y:  450 },
-    { x:  540, y:  810 },
-    { x:  900, y: 1170 },
-    { x: 1260, y: 1530 },
-    { x: 1620, y: 1890 },
-    { x: 1980, y:   90 }
-  ],
-  [ // Four
-    { x:    0, y:   90 },
-    { x:  360, y:  450 },
-    { x:  720, y:  810 },
-    { x: 1080, y: 1170 },
-    { x: 1440, y: 1530 },
-    { x: 1800, y: 1890 }
-  ],
-  [ // Five
-    { x:  270, y: 1710 },
-    { x:  630, y: 1350 },
-    { x:  990, y:  990 },
-    { x: 1350, y:  630 },
-    { x:  270, y: 1710 },
-    { x: 2070, y:    0 }
-  ],
-  [ // Six
-    { x:   90, y:  270 },
-    { x:  450, y:  630 },
-    { x:  810, y:  990 },
-    { x: 1170, y: 1350 },
-    { x: 1530, y: 1710 },
-    { x: 1890, y: 2070 }
-  ]
-];
+document.querySelector("#die-1").setAttribute("src", images[0]);
+document.querySelector("#die-2").setAttribute("src", images[0]);
+document.querySelector("#die-3").setAttribute("src", images[0]);
+document.querySelector("#die-4").setAttribute("src", images[0]);
+document.querySelector("#die-5").setAttribute("src", images[0]);
+       
+function roll(){
+    dice.forEach(function(die){
+        die.classList.add("shake");
+    });
+    setTimeout(function(){
+    dice.forEach(function(die){
+        die.classList.remove("shake");
+    });
+    const obj1 = {value: Math.floor(Math.random()*6) +1};
+    const obj2 = {value: Math.floor(Math.random()*6) +1};
+    const obj3 = {value: Math.floor(Math.random()*6) +1};
+    const obj4 = {value: Math.floor(Math.random()*6) +1};
+    const obj5 = {value: Math.floor(Math.random()*6) +1};
 
-var currentPositions = [
-  { x: 0, y: 0 },
-  { x: 0, y: 0 },
-  { x: 0, y: 0 },
-  { x: 0, y: 0 },
-  { x: 0, y: 0 },
-  { x: 0, y: 0 }
-];
-
-$('.cube').click(function(){
-  if ($(this).hasClass('held')) {
-    $(this).removeClass('held');
-  } else {
-    $(this).addClass('held');
-  }
-});
-
-$('#roll').click(function(){
-  var cubes = $('.cube:not(.held)');
-  cubes.each(function(){
-    roll($(this));
-  });
-  turns--;
+    
+    let valuearray = [obj1.value,obj2.value,obj3.value,obj4.value,obj5.value]
+    
+    console.log(obj1.value,obj2.value,obj3.value,obj4.value,obj5.value);
+    document.querySelector("#die-1").setAttribute("src", images[valuearray[0] -1]);
+    document.querySelector("#die-2").setAttribute("src", images[valuearray[1] -1]);
+    document.querySelector("#die-3").setAttribute("src", images[valuearray[2] -1]);
+    document.querySelector("#die-4").setAttribute("src", images[valuearray[3] -1]);
+    document.querySelector("#die-5").setAttribute("src", images[valuearray[4] -1]);
   
-  $('#turns').text(turns);
-  
-  if (turns === 0) {
-    $(this).unbind('click');
-    $(this).attr('disabled', 'disabled');
-  }
-});
+},
+    1000
+    )
+};
 
-function roll(dice) {
-  var rand = getRandom(max, min);
-  var spins = getRandom(max, min);
+//click to create shadow for each cube
+let die1 = document.querySelector("#die-1");
+die1.addEventListener("click",function handleClick(event) {
+    event.target.classList.toggle('hold');
+    });
+let die2 = document.querySelector("#die-2");
+die2.addEventListener("click",function handleClick(event) {
+      event.target.classList.toggle('hold');
+    });
+let die3 = document.querySelector("#die-3");
+die3.addEventListener("click",function handleClick(event) {
+      event.target.classList.toggle('hold');
+    });
+let die4 = document.querySelector("#die-4");
+die4.addEventListener("click",function handleClick(event) {
+      event.target.classList.toggle('hold');
+    });
+let die5 = document.querySelector("#die-5");
+die5.addEventListener("click",function handleClick(event) {
+      event.target.classList.toggle('hold');
+    });
 
-   console.log("Number: " + rand);
-   console.log("Spins: " + spins);
+let objarray= [die1,die2,die3,die4,die5];
 
-  rand--;
-  spins--;
-
-  // console.log(positions[rand]);
-
-  // console.log(positions[rand][spins].x+', '+positions[rand][spins].y);
-
-  var xPos = positions[rand][spins].x + 1800;
-  var yPos = positions[rand][spins].y + 1800;
-  
-  dice.css('transform', 'rotateX('+xPos+'deg) rotateY('+yPos+'deg)');
-  dice.css('-webkit-transform', 'rotateX('+xPos+'deg) rotateY('+yPos+'deg)');
-}
-
-function getRandom(max, min) {
-  return Math.floor(Math.random() * (max-min)) + min;
-}
+//still incomplete function
+function hold(){
+    Object.seal(objarray[1]);
+};
+hold();
