@@ -87,6 +87,7 @@ $('#roll').click(function(){
   }
 });
 
+
 function roll(dice) {
   var rand = getRandom(max, min);
   var spins = getRandom(max, min);
@@ -113,8 +114,7 @@ function getRandom(max, min) {
 }
 
 
-// buttons
-
+// rounds
 
 
 // scoring
