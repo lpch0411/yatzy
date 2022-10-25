@@ -86,8 +86,9 @@ position: relative;
 display: inline-block;
 width: fit-content;
 height: 40px;
-margin-right: 25px;
-margin-bottom: 10px;
+margin-right: 15px;
+margin-bottom: 15px;
+
 padding: 10px 15px;
 font-size: 20px;
 font-weight: 500;
@@ -99,6 +100,19 @@ button:hover{
   background-color: #56667a;
 }
 
+#roll{
+  margin-left: 575px; 
+  margin-top: 65px;
+}
+
+.buttoncontainer a {
+  text-decoration: none;
+	color:#f4f1bb;
+} 
+
+p{
+  text-align: center;
+}
 /* footer design*/
 p a{
 	text-decoration: none;
@@ -170,24 +184,20 @@ color: #f4f1bb;
   box-shadow: 5px 5px 15px 23px #ED6a5a;
   position: relative;
 }
-
-
-
-
 /* scoreboard design*/
 .scoreboard{
     background-color: #F4F1BB;
     border-collapse: collapse;
     color: #56667A;
-	float: right;
+	  float: right;
     border-color: #ED6A5A;
     font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
 
     position:relative;
-	display: inline-block;
-	z-index: 5;
+	  display: inline-block;
+	  z-index: 5;
 	
 }
 th,td{

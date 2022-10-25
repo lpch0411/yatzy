@@ -113,6 +113,8 @@ function getRandom(max, min) {
 }
 
 
+// buttons
+
 
 
 // scoring
@@ -174,9 +176,9 @@ $('#roll').click(function(){
 
 function takedices() {
 //cubes (will be taken from dices later)
-let die1 = 5;
+let die1 = 6;
 let die2 = 6;
-let die3 = 6;
+let die3 = 5;
 let die4 = 6;
 let die5 = 6;
 dicesScores[0] = die1;
@@ -317,7 +319,8 @@ const checkfor4 = (element) => element > 3;
 ofakind4 = repeaters.some(checkfor4) ? countall() : 0;
 
 // full house
-fullhouse = repeaters.length === 2 ? 25 : 0;
+const checkforfh = (element) => element == 3;
+fullhouse = repeaters.length === 2 && repeaters.some(checkforfh) ? 25 : 0;
 
 // small straight
 if (repeaters.length >= 4) {
