@@ -15,7 +15,7 @@ const dice = [
 
    {value: 1, hold: false, image: document.querySelector("#die1") },
    {value: 1, hold: false, image: document.querySelector("#die2")},
-  {value: 1, hold: false, image: document.querySelector("#die3")},
+   {value: 1, hold: false, image: document.querySelector("#die3")},
    {value: 1, hold: false, image: document.querySelector("#die4")},
    {value: 1, hold: false, image: document.querySelector("#die5")}
 ];
@@ -27,17 +27,16 @@ dice.forEach(function(die){
 	   if (rollcounter != 0) {
     event.target.classList.toggle('hold');
 	die.hold = !die.hold;
-	console.log(die.value, die.hold);
 	   };
     });
-
+	
 	  });
 	  
 function rolldice(){
     dice.forEach(function(die){
         if (!die.hold) {
 		die.image.classList.add("shake");
-		die.value = Math.floor(Math.random()*6) +1;		};
+		die.value = die.value = Math.floor(Math.random()*6) +1;		};
     });
     setTimeout(function(){ 
     dice.forEach(function(die){
@@ -57,6 +56,13 @@ function rolldice(){
     )
 };
 
+// reset dices after scoring
+function setdice(){
+	dice.forEach(function(die){
+		die.value = 1;
+		die.image.setAttribute("src", images[0]);
+});
+}
 
 
 
@@ -84,6 +90,7 @@ let lowertotal = 0;
 let totaltotal = 0;
 
 // Scoring display
+
 let acesscore = document.getElementById("aces");
 let twosscore = document.getElementById("twos");
 let threesscore = document.getElementById("threes");
@@ -111,6 +118,7 @@ setScore();
 
 	// Make an array with the dices score
 var dicesScores = Array(5);
+
 
 // after rolling shows temporary possible results with listeners to click
 $('#roll').click(function(){
@@ -143,20 +151,24 @@ function fixresult () {
   continuegame();
 	
 }
-
 // delete listeners, count results, count move, checks if game finished, or wait for next roll
 function continuegame() {
 		deletelisteners();
-
-	setScoretoNull();
-			counttotals();
-			rollcounter = 0;
-			rollsleft.innerHTML = 3 - rollcounter;
+	    setScoretoNull();
+		counttotals();
+		setdice();
+		dice.forEach(function(die){
+		if (die.hold)
+		die.hold = !die.hold;
+		die.image.classList.remove('hold');
+	});
+		rollcounter = 0;
+		rollsleft.innerHTML = 3 - rollcounter;
 	movecounter ++;
 	roundsleft.innerHTML = 13 - movecounter;
 	if (movecounter === 13) {
 		finishgame();
-	}
+	};
 }
 
 // animation for gameover
@@ -170,9 +182,12 @@ function finishgame() {
 	document.getElementById("confetti-wrapper").appendChild(yahtzeetext);
 } 
 
+
 // animation for yahtzee
 function celebrateyahtzees() {
-	for(i=0; i<150; i++) {
+	setTimeout(function(){ 
+    
+    for(i=0; i<150; i++) {
   // Random rotation
   var randomRotation = Math.floor(Math.random() * 360);
     // Random Scale
@@ -207,7 +222,8 @@ function celebrateyahtzees() {
 	yahtzeetext.style.left = 150 + 'px';
 	document.getElementById("confetti-wrapper").appendChild(yahtzeetext);
 
-} 
+} , 1200 );
+};
 
 // return the value of bonus and score elements
 function counttotals() {
@@ -323,8 +339,12 @@ function sumDuplicates(value, array) {
 	return count * value;
 }
 
+
+
 // Set the average results in the table
+
 function setScore() {
+	setTimeout(function(){ 
 	acesscore.innerHTML = aces;
 	twosscore.innerHTML = twos;
 	threesscore.innerHTML = threes;
@@ -341,8 +361,9 @@ function setScore() {
 	yahtzeescore.innerHTML = yahtzee;
 	chancescore.innerHTML = chance;
 	bonusyahtzeescore.innerHTML = bonusyahtzee;
-
+} , 1200 );
 }
+
 
 //adds listeners to score values
 function addlisteners() {
@@ -395,6 +416,5 @@ function setScoretoNull() {
  largestr = 0;
  yahtzee = 0;
  chance = 0;
-setScore();
 
 }
