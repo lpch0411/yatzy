@@ -1,120 +1,63 @@
 // dicing
 
-var min = 1;
-var max = 7;
-var turns = 3;
+let rollcounter = 0;
 
-var positions = [
-  [ // One
-    { x:  180, y: 1620 },
-    { x:  540, y: 1260 },
-    { x:  900, y:  900 },
-    { x: 1260, y:  540 },
-    { x: 1620, y:  180 },
-    { x: 1980, y: 1980 }
-  ],
-  [ // Two
-    { x:    0, y: 1980 },
-    { x:  360, y: 1620 },
-    { x:  720, y: 1260 },
-    { x: 1080, y:  900 },
-    { x: 1440, y:  540 },
-    { x: 1800, y:  180 }
-  ],
-  [ // Three
-    { x:  180, y:  450 },
-    { x:  540, y:  810 },
-    { x:  900, y: 1170 },
-    { x: 1260, y: 1530 },
-    { x: 1620, y: 1890 },
-    { x: 1980, y:   90 }
-  ],
-  [ // Four
-    { x:    0, y:   90 },
-    { x:  360, y:  450 },
-    { x:  720, y:  810 },
-    { x: 1080, y: 1170 },
-    { x: 1440, y: 1530 },
-    { x: 1800, y: 1890 }
-  ],
-  [ // Five
-    { x:  270, y: 1710 },
-    { x:  630, y: 1350 },
-    { x:  990, y:  990 },
-    { x: 1350, y:  630 },
-    { x:  270, y: 1710 },
-    { x: 2070, y:    0 }
-  ],
-  [ // Six
-    { x:   90, y:  270 },
-    { x:  450, y:  630 },
-    { x:  810, y:  990 },
-    { x: 1170, y: 1350 },
-    { x: 1530, y: 1710 },
-    { x: 1890, y: 2070 }
-  ]
+let images = ["../dice-1.png",
+"../dice-2.png",
+"../dice-3.png",
+"../dice-4.png",
+"../dice-5.png",
+"../dice-6.png"];
+
+
+
+const dice = [
+
+   {value: 1, hold: false, image: document.querySelector("#die1") },
+   {value: 1, hold: false, image: document.querySelector("#die2")},
+  {value: 1, hold: false, image: document.querySelector("#die3")},
+   {value: 1, hold: false, image: document.querySelector("#die4")},
+   {value: 1, hold: false, image: document.querySelector("#die5")}
 ];
+     
+dice.forEach(function(die){
+		
+   die.image.setAttribute("src", images[die.value -1]);
+   die.image.addEventListener("click",function handleClick(event) {
+	   if (rollcounter != 0) {
+    event.target.classList.toggle('hold');
+	die.hold = !die.hold;
+	console.log(die.value, die.hold);
+	   };
+    });
 
-var currentPositions = [
-  { x: 0, y: 0 },
-  { x: 0, y: 0 },
-  { x: 0, y: 0 },
-  { x: 0, y: 0 },
-  { x: 0, y: 0 },
-  { x: 0, y: 0 }
-];
-
-$('.cube').click(function(){
-  if ($(this).hasClass('held')) {
-    $(this).removeClass('held');
-  } else {
-    $(this).addClass('held');
-  }
-});
-
-$('#roll').click(function(){
-  var cubes = $('.cube:not(.held)');
-  cubes.each(function(){
-    roll($(this));
-  });
-  turns--;
+	  });
+	  
+function rolldice(){
+    dice.forEach(function(die){
+        if (!die.hold) {
+		die.image.classList.add("shake");
+		die.value = Math.floor(Math.random()*6) +1;		};
+    });
+    setTimeout(function(){ 
+    dice.forEach(function(die){
+		if (!die.hold) {
+        die.image.classList.remove("shake"); };
+    });
+	
+	  dice.forEach(function(die){
+		if (!die.hold) {
+    
+   die.image.setAttribute("src", images[die.value -1]);
+	  };
+	  });
   
-  $('#turns').text(turns);
-  
-  if (turns === 0) {
-    $(this).unbind('click');
-    $(this).attr('disabled', 'disabled');
-  }
-});
+},
+    1000
+    )
+};
 
 
-function roll(dice) {
-  var rand = getRandom(max, min);
-  var spins = getRandom(max, min);
-
-   console.log("Number: " + rand);
-   console.log("Spins: " + spins);
-
-  rand--;
-  spins--;
-
-  // console.log(positions[rand]);
-
-  // console.log(positions[rand][spins].x+', '+positions[rand][spins].y);
-
-  var xPos = positions[rand][spins].x + 1800;
-  var yPos = positions[rand][spins].y + 1800;
-  
-  dice.css('transform', 'rotateX('+xPos+'deg) rotateY('+yPos+'deg)');
-  dice.css('-webkit-transform', 'rotateX('+xPos+'deg) rotateY('+yPos+'deg)');
-}
-
-function getRandom(max, min) {
-  return Math.floor(Math.random() * (max-min)) + min;
-}
-
-
-// rounds
 
 
 // scoring
@@ -160,6 +103,10 @@ let bonusyahtzeescore = document.getElementById("bonusyahtzee");
 let lowertotalscore = document.getElementById("lowertotal");
 let totaltotalscore = document.getElementById("totaltotal");
 
+
+let roundsleft = document.getElementById("rounds");
+let rollsleft = document.getElementById("turns");
+
 setScore();
 
 	// Make an array with the dices score
@@ -167,25 +114,24 @@ var dicesScores = Array(5);
 
 // after rolling shows temporary possible results with listeners to click
 $('#roll').click(function(){
-	addlisteners();
+	if (rollcounter < 3) {
+	rolldice();
+	rollcounter ++;
+	rollsleft.innerHTML = 3 - rollcounter;
 	takedices();
+	addlisteners();
 	countupper();
 	countlower();
 	setScore(); 
+	};
 });
 
 function takedices() {
 //cubes (will be taken from dices later)
-let die1 = 6;
-let die2 = 6;
-let die3 = 5;
-let die4 = 6;
-let die5 = 6;
-dicesScores[0] = die1;
-dicesScores[1] = die2;
-dicesScores[2] = die3;
-dicesScores[3] = die4;
-dicesScores[4] = die5;
+for (let i = 0; i < 5; i++) {
+dicesScores[i] = dice[i].value;
+
+};
 }
 
 // when result chosed it saves to permanent memory, hides temporary result from field and continues game
@@ -204,7 +150,10 @@ function continuegame() {
 
 	setScoretoNull();
 			counttotals();
+			rollcounter = 0;
+			rollsleft.innerHTML = 3 - rollcounter;
 	movecounter ++;
+	roundsleft.innerHTML = 13 - movecounter;
 	if (movecounter === 13) {
 		finishgame();
 	}
