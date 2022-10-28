@@ -65,6 +65,18 @@ function setdice(){
 }
 
 
+//button 
+
+var modal = document.getElementById("aboutAssignment");
+var btn = document.getElementById("About");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+	modal.style.display = "block";
+  }
+span.onclick = function() {
+	modal.style.display = "none";
+  }
 
 // scoring
 
@@ -339,8 +351,6 @@ function sumDuplicates(value, array) {
 	return count * value;
 }
 
-
-
 // Set the average results in the table
 
 function setScore() {
@@ -363,7 +373,6 @@ function setScore() {
 	bonusyahtzeescore.innerHTML = bonusyahtzee;
 } , 1200 );
 }
-
 
 //adds listeners to score values
 function addlisteners() {
