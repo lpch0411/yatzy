@@ -1,3 +1,0 @@
-The purpose of this assignment is to create a Yahtzee game using HTML, CSS and JavaScript.
-
-Thank you to Amanjot sir 
