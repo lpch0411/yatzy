@@ -9,8 +9,6 @@ let images = ["../dice-1.png",
 "../dice-5.png",
 "../dice-6.png"];
 
-
-
 const dice = [
 
    {value: 1, hold: false, image: document.querySelector("#die1") },
